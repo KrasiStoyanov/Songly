@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row text-center">
+		<div class="col-md-6">
+			<div class="jumbotron">
+				<p>Want to add more people?</p>
+
+			<form>
+				<div class="form-group">
+					<label for="personName" class="col-lg-2 control-label">Name</label>
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="personName" placeholder="Name" ng-model="name">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="personAge" class="col-lg-2 control-label">Age</label>
+					<div class="col-lg-10">
+						<input type="text" class="form-control" id="personAge" placeholder="Age" ng-model="age">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-lg-10 col-lg-offset-2">
+	    				<button class="btn btn-default pull-left" ng-click="addPerson()">Add</button>
+					</div>
+				</div>
+			</form>
+
+				<h2 class="text-left">People:</h2>
+				<ul class="text-left">
+					<li ng-repeat="person in persons">Name: {{ person.name }}, Age: {{ person.age }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

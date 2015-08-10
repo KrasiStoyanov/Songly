@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ngCookies']).
+var app = angular.module('Songly', ['ngRoute', 'ngResource', 'ngCookies']).
     config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/home', {

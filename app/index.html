@@ -4,42 +4,184 @@
     <meta charset="utf-8">
     <title>Application</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../css/bootstrap-theme.min.css" />
     <link rel="stylesheet" href="../css/toastr.min.css" />
-    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
 </head>
 <body ng-app="myApp" ng-cloak>
-<div class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="#/" class="navbar-brand">Music App</a>
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="#/home">Home</a>
-                </li>
-                <li>
-                    <a href="#/artists">Artists</a>
-                </li>
-            </ul>
-        </div>
+<section class="vbox">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo.svg" alt="Songly - Logo"/>
+                        <span class="app-name">Songly</span>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="expand">
+                            <a href="#">
+                                <i class="fa fa-navicon"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="navbar-form navbar-left" role="search">
+                        <button type="submit" class="btn btn-default">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search songs, albums...">
+                        </div>
+                    </form>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="../img/notificationsBell.svg" alt="Notification Bell"/>
+                                <span class="badge">3</span>
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <strong class="panel-title">
+                                            You have
+                                            <span class="notifications-count">3</span>
+                                            new notifications
+                                        </strong>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="list-group">
+                                            <a href="" class="media list-group-item">
+                                                <div class="pull-left thumb-m notification-image-wrapper">
+                                                    <i class="glyphicon glyphicon-envelope"></i>
+                                                </div>
+                                                <div class="media-body notification-data">
+                                                    <p class="notification-title media-heading">Use awesome animate.css</p>
+                                                    <small class="notification-when">13 minutes ago</small>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="list-group">
+                                            <a href="" class="media list-group-item">
+                                                <div class="pull-left thumb-m notification-image-wrapper">
+                                                    <img class="media-object notification-image" src="../img/userPhoto.jpg" alt="Sample notification image">
+                                                </div>
+                                                <div class="media-body notification-data">
+                                                    <p class="notification-title">Tet this cool new dashboard</p>
+                                                    <small class="notification-when">13 minutes ago</small>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="list-group">
+                                            <a href="" class="media list-group-item">
+                                                <div class="media-body notification-data">
+                                                    <p class="notification-title">Play with the UI & UX Design kit</p>
+                                                    <small class="notification-when">13 minutes ago</small>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a href="" class="pull-right">
+                                            <i class="glyphicon glyphicon-cog"></i>
+                                        </a>
+                                        <a href="">See all the notifications</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="user dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="username">
+                                    Emily Truman <span class="caret"></span>
+                                </span>
+                                <span class="profile-image-wrapper">
+                                    <img src="../img/userPhoto.jpg" alt="Profile Image"/>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Notifications</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Support</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div id="main-content">
+        <section class="hbox">
+            <aside id="sidebar">
+                <nav class="vbox">
+                    <section>
+                        <ul class="sidebar">
+                            <li class="hidden hidden-title">
+                                <span>Discover</span>
+                            </li>
+                            <li class="list-item not-expanded">
+                                <a href="">
+                                    <i class="fa fa-globe"></i>
+                                    <span>What's new</span>
+                                </a>
+                            </li>
+                            <li class="list-item not-expanded">
+                                <a href="">
+                                    <i class="fa fa-music"></i>
+                                    <span>Genres</span>
+                                </a>
+                            </li>
+                            <li class="hidden hidden-title">
+                                <span>Your</span>
+                            </li>
+                            <li class="list-item not-expanded">
+                                <a href="">
+                                    <i class="fa fa-heart-o"></i>
+                                    <span>Favorites</span>
+                                </a>
+                            </li>
+                            <li class="list-item not-expanded">
+                                <a href="">
+                                    <i class="fa fa-align-left"></i>
+                                    <span>Lyrics</span>
+                                </a>
+                            </li>
+                            <li class="list-item not-expanded">
+                                <a href="">
+                                    <i class="fa fa-list"></i>
+                                    <span>Playlists</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </nav>
+            </aside>
+            <section class="content">
+                <div ng-view>
+                </div>
+            </section>
+        </section>
     </div>
-</div>
-
-<div ng-view>
-</div>
-
-<footer class="text-center" ng-cloak>
-    <strong>Copyright:</strong> <a href="http://telerikacademy.com/" target="_blank">Telerik Academy 2014</a></small>
-	<br />
-	Powered by:</strong> <a href="http://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></small>
-</footer>
+</section>
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/toastr/toastr.min.js"></script>
@@ -51,5 +193,7 @@
 <script src="js/app.js"></script>
 <script src="js/controllers/HomeController.js"></script>
 <script src="js/services/notifier.js"></script>
+
+<script src="lib/sidebar/sidebar.js"></script>
 </body>
 </html>

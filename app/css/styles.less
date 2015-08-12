@@ -10,6 +10,7 @@ Description: Style-Layout
 #GENERAL
 #HEADER
 #SIDEBAR
+#SONG LAYOUT
 #MAIN CONTENT
 
 =====SECTIONS=====
@@ -490,6 +491,42 @@ nav.navbar-default {
           font-size: 0.65em;
           font-weight: 700;
         }
+      }
+    }
+  }
+}
+
+/* SONG LAYOUT
+   ================================================== */
+
+#songs {
+  .item {
+    .song-image {
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .user-controls {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.75);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      .play-pause {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
       }
     }
   }

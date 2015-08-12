@@ -59,40 +59,48 @@
                                             new notifications
                                         </strong>
                                     </div>
+
                                     <div class="panel-body">
-                                        <div class="list-group">
-                                            <a href="" class="media list-group-item">
-                                                <div class="pull-left thumb-m notification-image-wrapper">
-                                                    <i class="glyphicon glyphicon-envelope"></i>
+                                        <div ng-repeat="notification in notifications">
+                                            <div ng-if="$even">
+                                                <div class="list-group even">
+                                                    <a href="" class="media list-group-item">
+                                                        <div class="pull-left thumb-m notification-image-wrapper">
+                                                            <div ng-show="notification.icon" class="ng-hide">
+                                                                <i class="{{notification.icon}}"></i>
+                                                            </div>
+                                                            <div ng-show="notification.src" class="ng-hide">
+                                                                <img class="media-object notification-image" src="{{notification.src}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body notification-data">
+                                                            <p class="notification-title media-heading">{{notification.title}}</p>
+                                                            <small class="notification-when">{{notification.when}} ago</small>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                                <div class="media-body notification-data">
-                                                    <p class="notification-title media-heading">Use awesome animate.css</p>
-                                                    <small class="notification-when">13 minutes ago</small>
+                                            </div>
+                                            <div ng-if="$odd">
+                                                <div class="list-group">
+                                                    <a href="" class="media list-group-item">
+                                                        <div class="pull-left thumb-m notification-image-wrapper">
+                                                            <div ng-show="notification.icon" class="ng-hide">
+                                                                <i class="{{notification.icon}}"></i>
+                                                            </div>
+                                                            <div ng-show="notification.src" class="ng-hide">
+                                                                <img class="media-object notification-image" src="{{notification.src}}">
+                                                            </div>
+                                                        </div>
+                                                        <div class="media-body notification-data">
+                                                            <p class="notification-title media-heading">{{notification.title}}</p>
+                                                            <small class="notification-when">{{notification.when}} ago</small>
+                                                        </div>
+                                                    </a>
                                                 </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="list-group">
-                                            <a href="" class="media list-group-item">
-                                                <div class="pull-left thumb-m notification-image-wrapper">
-                                                    <img class="media-object notification-image" src="../img/userPhoto.jpg" alt="Sample notification image">
-                                                </div>
-                                                <div class="media-body notification-data">
-                                                    <p class="notification-title">Tet this cool new dashboard</p>
-                                                    <small class="notification-when">13 minutes ago</small>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                        <div class="list-group">
-                                            <a href="" class="media list-group-item">
-                                                <div class="media-body notification-data">
-                                                    <p class="notification-title">Play with the UI & UX Design kit</p>
-                                                    <small class="notification-when">13 minutes ago</small>
-                                                </div>
-                                            </a>
+                                            </div>
                                         </div>
                                     </div>
+
                                     <div class="panel-footer">
                                         <a href="" class="pull-right">
                                             <i class="glyphicon glyphicon-cog"></i>
@@ -105,12 +113,13 @@
                         <li class="dropdown">
                             <a href="#" class="user dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <span class="username">
-                                    Emily Truman <span class="caret"></span>
+                                    {{user.username}} <span class="caret"></span>
                                 </span>
                                 <span class="profile-image-wrapper">
-                                    <img src="../img/userPhoto.jpg" alt="Profile Image"/>
+                                    <img src="{{user.profileImageSrc}}" alt="Profile Image"/>
                                 </span>
                             </a>
+
                             <ul class="dropdown-menu">
                                 <li><a href="#">Profile</a></li>
                                 <li><a href="#">Settings</a></li>

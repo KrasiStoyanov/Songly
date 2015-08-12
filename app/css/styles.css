@@ -249,7 +249,7 @@ nav.navbar-default div.dropdown-menu .panel .panel-body {
 nav.navbar-default div.dropdown-menu .panel .panel-body .list-group {
   margin: 0;
 }
-nav.navbar-default div.dropdown-menu .panel .panel-body .list-group:nth-child(even) a {
+nav.navbar-default div.dropdown-menu .panel .panel-body .list-group.even a {
   background-color: #FAFAFA;
 }
 nav.navbar-default div.dropdown-menu .panel .panel-body .list-group-item {

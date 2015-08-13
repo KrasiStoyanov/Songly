@@ -1,37 +1,49 @@
-    <div id="songs" class="row">
-        <div ng-repeat="song in songs">
-            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
-                <div class="item">
-                    <div class="song-image">
-                        <div class="bottom">
-                            <span class="length">{{song.length}}</span>
-                        </div>
-                        <div class="user-controls">
-                            <div class="rating"></div>
-                            <div class="play-pause">
-                                <a href="">
-                                    <i class="glyphicon glyphicon-play text-center"></i>
-                                    <i class="glyphicon glyphicon-pause hidden"></i>
-                                </a>
-                            </div>
+    <section id="songs">
+        <div class="row">
+            <div ng-repeat="song in songs">
+                <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                    <div class="item">
+                        <div class="song-image">
                             <div class="bottom">
-                                <a href="" class="pull-right">
-                                    <i class="fa fa-heart-o hidden"></i>
-                                    <i class="fa fa-heart"></i>
-                                </a>
-                                <a href="">
-                                    <i class="fa fa-plus-circle hidden"></i>
-                                    <i class="fa fa-check-circle"></i>
-                                </a>
+                                <span class="length">{{song.length}}</span>
                             </div>
+                            <div class="user-controls">
+                                <div class="rating padder">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                                <div class="play-pause text-center">
+                                    <a href="">
+                                        <i class="glyphicon glyphicon-play"></i>
+                                        <i class="glyphicon glyphicon-pause hidden"></i>
+                                    </a>
+                                </div>
+                                <div class="bottom padder">
+                                    <a href="" class="pull-right">
+                                        <i class="fa fa-heart-o hidden"></i>
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    <a href="">
+                                        <i class="fa fa-plus-circle hidden"></i>
+                                        <i class="fa fa-check-circle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href=""><img src="{{song.thumbnailSrc}}" alt="{{song.alt}}"/></a>
                         </div>
-                        <a href=""><img src="{{song.thumbnailSrc}}" alt="{{song.alt}}"/></a>
-                    </div>
-                    <div class="song-data">
-                        <p>{{song.title}}</p>
-                        <a class="text-muted" href="{{song.artistHref}}">{{song.artist}}</a>
+                        <div class="song-data">
+                            <p>{{song.title}}</p>
+                            <a class="text-muted" href="{{song.artistHref}}">{{song.artist}}</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <aside id="queue">
+        asdasdas
+    </aside>

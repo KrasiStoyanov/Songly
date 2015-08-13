@@ -37,6 +37,12 @@ Description: Style-Layout
   -moz-box-shadow: @arguments;
 }
 
+.border-radius(@value) {
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  border-radius: @value;
+}
+
 .transition(@property: all; @type-of-transition: ease-in; @time: 0.2s) {
   transition-property: @property;
   -webkit-transition-property: @property;
@@ -76,6 +82,18 @@ a {
   position: relative;
   height: 100%;
   width: 100%;
+}
+
+.padder {
+  padding: 0 15px;
+}
+
+.bottom {
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* HEADER
@@ -164,8 +182,8 @@ nav.navbar-default {
     ul.dropdown-menu {
       margin: 0;
       border: 0;
-      border-radius: 3px;
 
+      .border-radius(3px);
       .box-shadow(0 0 5px 1px rgba(0, 0, 0, 0.10));
 
       a {
@@ -199,12 +217,14 @@ nav.navbar-default {
       width: 40px;
       position: relative;
       white-space: nowrap;
-      border-radius: 50%;
+
+      .border-radius(50%);
 
       img {
         height: auto;
         max-width: 100%;
-        border-radius: 50%;
+
+        .border-radius(50%);
       }
     }
   }
@@ -246,7 +266,8 @@ nav.navbar-default {
     margin: 0;
     padding: 0;
     border: 0;
-    border-radius: 3px;
+
+    .border-radius(3px);
 
     .box-shadow(0 0 5px 1px rgba(0, 0, 0, 0.10));
 
@@ -275,7 +296,8 @@ nav.navbar-default {
           img {
             height: auto;
             max-width: 100%;
-            border-radius: 50%;
+
+            .border-radius(50%);
           }
 
           i {
@@ -500,15 +522,36 @@ nav.navbar-default {
    ================================================== */
 
 #songs {
+  width: 82%;
+
+  .row {
+    margin: 0;
+  }
+
   .item {
     .song-image {
       overflow: hidden;
       position: relative;
-      text-align: center;
+
+      .border-radius(3px);
+    }
+
+    a {
+      color: darken(@white-color, 15%);
+    }
+
+    a:hover {
+      color: @white-color;
     }
 
     img {
-      width: 100%;
+      display: block;
+      margin: auto;
+      max-height: 221px;
+    }
+
+    .length {
+      margin-left: 10px;
     }
 
     .user-controls {
@@ -522,7 +565,16 @@ nav.navbar-default {
       bottom: 0;
       left: 0;
 
+      .rating {
+        margin-top: 10px;
+        text-align: left;
+        font-size: 0.9em;
+        color: @white-color;
+      }
+
       .play-pause {
+        margin-top: -15px;
+        font-size: 2em;
         position: absolute;
         top: 50%;
         left: 0;
@@ -530,4 +582,13 @@ nav.navbar-default {
       }
     }
   }
+}
+
+
+
+
+#queue {
+  display: inline-block;
+  float: right;
+  width: 18%;
 }

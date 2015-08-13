@@ -1,7 +1,16 @@
-/* global $ */
-
 $(document).ready(function () {
-    $('.item .song-image').run(function () {
+    $('div.play-pause a').on('click', function () {
+        var $thisChildren = $(this).children(),
+            $playIcon = $($thisChildren[0]),
+            $pauseIcon = $($thisChildren[1]);
 
+        if ($playIcon.hasClass('hidden')) {
+            $pauseIcon.addClass('hidden');
+            $playIcon.removeClass('hidden');
+        }
+        else {
+            $playIcon.addClass('hidden');
+            $pauseIcon.removeClass('hidden');
+        }
     });
 });

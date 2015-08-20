@@ -53,6 +53,37 @@ a {
   left: 0;
   right: 0;
 }
+a.round-button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 4px 15px;
+  font-size: 1.143em;
+  border: 2px solid #4c4c4c;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  transition-property: all;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+}
+a.round-button.active,
+a.round-button:hover,
+a.round-button:focus,
+a.round-button:active {
+  outline: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  background-color: #4c4c4c;
+  color: #ffffff;
+  text-decoration: none;
+}
 /* HEADER
    ================================================== */
 header:before {
@@ -438,11 +469,19 @@ nav.navbar-default span.badge {
 /* SONG LAYOUT
    ================================================== */
 #songs {
+  padding: 0 30px;
   float: left;
   width: 82%;
 }
 #songs .row {
   margin: 0;
+  padding: 0;
+}
+#songs .row .col-xs-6 {
+  padding: 0 10px;
+}
+#songs .filter-buttons {
+  padding: 10px 10px 20px 10px;
 }
 #songs .item .song-image {
   overflow: hidden;

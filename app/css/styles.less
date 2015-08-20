@@ -28,6 +28,7 @@ Description: Style-Layout
 @sidebar-hover-color: #595959;
 @dropdown-panel-color: #EFF4F7;
 @font-color: #4C4C4C;
+@muted-link-color: #7f7f7f;
 @muted-text-color: #989898;
 @white-color: #fff;
 
@@ -99,6 +100,7 @@ a {
 a.round-button {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 4px 15px;
   font-size: 1.143em;
 
@@ -559,19 +561,20 @@ nav.navbar-default {
   }
 
   .filter-buttons {
-    padding: 10px 10px 20px 10px;
+    padding: 10px;
   }
 
   .item {
     .song-image {
+      margin-bottom: 15px;
       overflow: hidden;
       position: relative;
 
-      .border-radius(3px);
+      .border-radius(4px);
     }
 
     a {
-      color: darken(@white-color, 15%);
+      color: darken(@white-color, 15%);;
     }
 
     a:hover {
@@ -613,6 +616,17 @@ nav.navbar-default {
         top: 50%;
         left: 0;
         right: 0;
+      }
+    }
+
+    .song-data {
+      p {
+        margin: 0;
+      }
+
+      a {
+        color: @muted-link-color;
+        font-size: 0.857em;
       }
     }
   }

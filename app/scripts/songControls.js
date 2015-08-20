@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log('ssss');
     $('div.play-pause a').on('click', function () {
     console.log('hsss');
         var $thisChildren = $(this).children(),

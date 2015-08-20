@@ -56,6 +56,7 @@ a {
 a.round-button {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
   padding: 4px 15px;
   font-size: 1.143em;
   border: 2px solid #4c4c4c;
@@ -481,14 +482,15 @@ nav.navbar-default span.badge {
   padding: 0 10px;
 }
 #songs .filter-buttons {
-  padding: 10px 10px 20px 10px;
+  padding: 10px;
 }
 #songs .item .song-image {
+  margin-bottom: 15px;
   overflow: hidden;
   position: relative;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 #songs .item a {
   color: #d9d9d9;
@@ -527,6 +529,13 @@ nav.navbar-default span.badge {
   top: 50%;
   left: 0;
   right: 0;
+}
+#songs .item .song-data p {
+  margin: 0;
+}
+#songs .item .song-data a {
+  color: #7f7f7f;
+  font-size: 0.857em;
 }
 #queue {
   display: inline-block;

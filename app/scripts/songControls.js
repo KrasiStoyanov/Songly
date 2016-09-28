@@ -1,4 +1,5 @@
-$(document).ready(function () {
+/* global $ */
+'use strict';
     console.log('ssss');
     $('div.play-pause a').on('click', function () {
     console.log('hsss');
@@ -9,10 +10,9 @@ $(document).ready(function () {
         if ($playIcon.hasClass('hidden')) {
             $pauseIcon.addClass('hidden');
             $playIcon.removeClass('hidden');
-        }
+        }   
         else {
             $playIcon.addClass('hidden');
             $pauseIcon.removeClass('hidden');
         }
     });
-});
